@@ -7,7 +7,7 @@ app.ReportsView = Backbone.View.extend({
 	el: '#reports',
 
 	events: {
-		"click #save": "addReport"
+		
 	},
 
 	initialize: function( reportSample ){
@@ -26,12 +26,6 @@ app.ReportsView = Backbone.View.extend({
 	renderReport: function( report ){
 		var view = new app.ReportView({ model: report });
 		this.$el.append( view.render().el );
-	},
-
-	addReport: function( e ){
-		e.preventDefault();
-
-		var formData = {};
 	}
 
 });

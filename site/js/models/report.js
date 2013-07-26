@@ -18,7 +18,7 @@ app.Report = Backbone.Model.extend({
 		pm_bp: '',
 		pm_pulse: '',
 		bedtime_meds: '',
-		bedtime: ''
+		bedtime: '',
 	}
 
 });

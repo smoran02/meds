@@ -10,9 +10,19 @@ app.ReportView = Backbone.View.extend({
 
 	template: _.template( $( '#reportTemplate' ).html() ),
 
+	events: {
+		"click table": "showDailyReport"
+	},
+
 	render: function(){
 		this.$el.html( this.template( this.model.toJSON() ) );
 		return this;
+	},
+
+	showDailyReport: function( e ){
+		e.preventDefault();
+		console.log( this.model.get( 'id' ) );
+		
 	}
 
 });
