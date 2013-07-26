@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Medicine Dashboard</title>
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+	<ul>
+		<li><a href="#">My Daily Report</a></li>
+		<li><a href="#">Week at a Glance</a></li>
+	</ul>
+	<div id="reports">
+		<form id="addReport" action="#">
+			<div>
+			<label for="am_weight">Morning Weight: </label><input id="am_weight" type="text" />
+			<label for="am_bp">Morning BP: </label><input id="am_bp" type="text" />
+			<label for="am_pulse">Morning Pulse: </label><input id="am_pulse" type="text" />
+			<label for="am_temp">Morning Temperature: </label><input id="am_temp" type="text" />
+			<label for="am_meds">Morning Medication: </label><input id="am_meds" class="timeButton" type="button" value="√" />
+			<label for="miralax">Miralax: </label><input id="miralax" class="timeButton" type="button" value="√" />
+			<label for="lunch_meds">Lunch Medication: </label><input id="lunch_meds" class="timeButton" type="button" value="√" />
+			<label for="nap">Nap: </label><input name="nap" type="radio" value="yes" /><span>Yes</span><input name="nap" type="radio" value="no" checked="checked" /><span>No</span>
+			<label for="pm_meds">Evening Medication: </label><input id="pm_meds" class="timeButton" type="button" value="√" />
+			<label for="pm_bp">Evening BP: </label><input id="pm_bp" type="text" />
+			<label for="pm_pulse">Evening Pulse: </label><input id="pm_pulse" type="text" />
+			<label for="bedtime_meds">Bedtime Medication: </label><input id="bedtime_meds" class="timeButton" type="button" value="√" />
+			<label for="bedtime">Bedtime: </label><input id="bedtime" class="timeButton" type="button" value="√" />
+			<button class="save">Save</button>
+			</div>
+		</form>
+	</div>
+	<script id="reportTemplate" type="text/template">
+		<table>
+			<tr><td>Date</td><td><%= date.toLocaleString() %></td></tr>
+			<tr><td>AM Weight</td><td><%= am_weight %></td></tr>
+			<tr><td>AM Blood Pressure</td><td><%= am_bp %></td></tr>
+			<tr><td>AM Pulse</td><td><%= am_pulse %></td></tr>
+			<tr><td>AM Temp</td><td><%= am_temp %></td></tr>
+			<tr><td>AM Meds</td><td><%= am_meds %></td></tr>
+			<tr><td>Miralax</td><td><%= miralax %></td></tr>
+			<tr><td>Lunch Meds</td><td><%= lunch_meds %></td></tr>
+			<tr><td>Nap</td><td><%= nap %></td></tr>
+			<tr><td>PM Meds</td><td><%= pm_meds %></td></tr>
+			<tr><td>PM Blood Pressure</td><td><%= pm_bp %></td></tr>
+			<tr><td>PM Pulse</td><td><%= pm_pulse %></td></tr>
+			<tr><td>Bedtime Meds</td><td><%= bedtime_meds %></td></tr>
+			<tr><td>Bedtime</td><td><%= bedtime %></td></tr>
+		</table>
+	</script>
+	<script src="js/lib/jquery.min.js"></script>
+	<script src="js/lib/underscore-min.js"></script>
+	<script src="js/lib/backbone-min.js"></script>
+	<script src="js/models/report.js"></script>
+	<script src="js/collections/reports.js"></script>
+	<script src="js/views/report.js"></script>
+	<script src="js/views/reports.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>

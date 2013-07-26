@@ -1,0 +1,46 @@
+ul {
+	list-style-type: none;
+}
+
+#addReport label {
+	float: left;
+	clear: left;
+	width: 150px;
+}
+
+#addReport input[type="text"], #addReport input[type="button"] {
+	width: 100px;
+	clear: right;
+	float: left;
+}
+
+#addReport input[type="radio"] {
+	float: left;
+	width: 10px;
+}
+
+#addReport span {
+	float: left;
+}
+
+#addReport button {
+	float: left;
+	clear: both;
+}
+
+#addReport div:after {
+	content: "";
+	display: block;
+	height: 0;
+	visibility: hidden;
+	clear: both;
+	font-size: 0;
+	line-height: 0;
+}
+
+.reportContainer {
+	float: left;
+	margin: 5px;
+	border: 1px solid gray;
+	padding: 5px;
+}
